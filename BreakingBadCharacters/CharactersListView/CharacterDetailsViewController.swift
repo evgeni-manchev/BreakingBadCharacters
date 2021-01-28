@@ -26,6 +26,7 @@ class CharacterDetailsViewController: UIViewController {
             characterImage.kf.setImage(with: charImage)
             characterImage.contentMode = .scaleAspectFill
             characterImage.layer.borderWidth = 2
+            characterImage.layer.borderColor = UIColor.green026635.cgColor
             occupation.lineBreakMode = .byWordWrapping
             occupation.numberOfLines = 3
             seasonAppearance.lineBreakMode = .byWordWrapping

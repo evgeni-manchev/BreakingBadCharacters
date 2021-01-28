@@ -21,7 +21,7 @@ class CharacterTableViewCell: UITableViewCell {
         characterImage.contentMode = .scaleAspectFill
         
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor(hex: 0x026635).cgColor
+        layer.borderColor = UIColor.green026635.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
