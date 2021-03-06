@@ -33,7 +33,10 @@ class CharactersTableViewController: UITableViewController, UISearchBarDelegate,
                 self.blurEffectView.isHidden = true
                 self.indicator.stopAnimating()
                 self.indicator.hidesWhenStopped = true
-                self.seasonPicker.delegate?.pickerView?(self.seasonPicker, didSelectRow: 0, inComponent: 0)
+                if self.firstVisit {
+                    self.seasonPicker.delegate?.pickerView?(self.seasonPicker, didSelectRow: 0, inComponent: 0)
+                    self.firstVisit = false
+                }
             }
         }
     }
@@ -42,6 +45,8 @@ class CharactersTableViewController: UITableViewController, UISearchBarDelegate,
     var filteredList: Characters = []
     
     var selectedCharacter: Character?
+    
+    var firstVisit: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
