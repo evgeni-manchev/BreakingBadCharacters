@@ -70,6 +70,8 @@ class CharactersTableViewController: UITableViewController, UISearchBarDelegate,
         definesPresentationContext = true
         
         title = "List of \"Breaking Bad\" characters"
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "Back", style: .plain, target: nil, action: nil)
         
         ContentManager.requestContent(completionHandler: { (characters) in
             self.charactersList = characters
